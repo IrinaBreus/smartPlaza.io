@@ -1,0 +1,50 @@
+.header {
+    background: url('../../img/header/header_bg.jpg') center center/cover no-repeat;
+    padding: 24px 0 207px 0;
+    position: relative;
+    &__main {
+        grid-column: 2 / 3;
+    }
+    &__nav-panel {
+        display: grid;
+        grid-template-columns: min-content 1fr max-content;
+        align-items: center;
+        padding-bottom: 24px;
+    }
+    &__nav-menu {
+        grid-column: 3 / 4;
+        display: grid;
+        grid-template-columns: repeat(6, max-content);
+        gap: 40px;
+        align-items: center;
+        list-style: none;
+        font-size: 14px;
+        font-weight: 400;
+        text-transform: uppercase;
+        a {
+            color: #000;
+            text-decoration: none;
+        }
+        li {
+            padding-bottom: 4px;
+            &:hover {
+                border-bottom: 2px solid red;
+                padding-bottom: 2px;
+            }
+        }
+        &_active {
+            border-bottom: 2px solid red;
+        }
+    }
+    &__divider {
+        width: 100%;
+        height: 1px;
+        background: var(--white);
+        position: absolute;
+        left: 0;
+        // top: 94px;
+    }
+    &__descr {
+        position: relative;
+    }
+}
