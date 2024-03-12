@@ -1,0 +1,13 @@
+.btn {
+    padding: 13px 105px;
+    font-size: 16px;
+    font-weight: 400;
+    border-radius: 4px;
+    border: none;
+    background: linear-gradient(324deg, #eb1d23 0%, #a30003 100%);
+    transition: all .7s;
+    &:hover {
+        background: linear-gradient(324deg, #811b1e 0%, #5f1112 100%);
+        transform: translateY(2px);
+    }
+}

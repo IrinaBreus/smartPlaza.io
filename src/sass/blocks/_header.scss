@@ -2,14 +2,14 @@
     background: url('../../img/header/header_bg.jpg') center center/cover no-repeat;
     padding: 24px 0 207px 0;
     position: relative;
-    &__main {
-        grid-column: 2 / 3;
-    }
+    overflow: hidden;
+    
     &__nav-panel {
         display: grid;
         grid-template-columns: min-content 1fr max-content;
         align-items: center;
         padding-bottom: 24px;
+        margin-bottom: 112px;
     }
     &__nav-menu {
         grid-column: 3 / 4;
@@ -42,9 +42,96 @@
         background: var(--white);
         position: absolute;
         left: 0;
-        // top: 94px;
+        top: 94px;
     }
     &__descr {
         position: relative;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px 26px;
+        min-height: 666px;
+    }
+    &__text {
+        grid-column: 1 / 2;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 75%;
+        left: -100%;
+        animation: leftToRight .9s ease 1s forwards;
+    }
+    &__title {
+        position: relative;
+        font-size: 44px;
+        font-weight: 600;
+        line-height: 132%;
+        background: linear-gradient(324deg, #eb1d23 0%, #a30003 100%);
+        background-clip: text;
+        color: transparent;
+        backface-visibility: hidden;
+        margin-bottom: 28px;
+        &::after {
+            content: '';
+            position: absolute;
+            width: 140px;
+            height: 2px;
+            background: var(--red);
+            bottom: -10px;
+            left: 0;
+        }
+        span {
+            color: var(--white);
+        }
+    }
+    &__txt {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 137%;
+        margin-bottom: 32px;
+    }
+    &__img {
+        grid-column: 2 / 3;
+        position: absolute;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 289px 337px;
+        gap: 40px 24px;
+        right: -150%;
+        animation: rightToLeft .9s ease 1.6s forwards;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 40px;
+        }
+    }
+    &__foto {
+        &_1 {
+            grid-area: 1 / 1 / 2 / 2;
+            // img {
+            //     width: 100%;
+            //     height: 100%;
+            //     object-fit: cover;
+            //     border-radius: 40px;
+            // }
+        }
+        &_2 {
+            grid-area: 1 / 2 / 2 / 3;
+            // img {
+            //     width: 100%;
+            //     height: 100%;
+            //     object-fit: cover;
+            //     border-radius: 40px;
+            // }
+        }
+        &_3 {
+            grid-column: 1 / 3;
+            // img {
+            //     width: 100%;
+            //     height: 100%;
+            //     object-fit: cover;
+            //     border-radius: 40px;
+            // }
+        }
     }
 }

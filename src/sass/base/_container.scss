@@ -5,6 +5,10 @@
     grid-template-columns: 1fr 12fr 1fr;
 }
 
+.main-block {
+    grid-column: 2 / 3;
+}
+
 // @media (max-width: 1200px) {
 //     .container {
 //         max-width: 960px;

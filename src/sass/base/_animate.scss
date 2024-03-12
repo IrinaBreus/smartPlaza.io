@@ -1,0 +1,22 @@
+@keyframes leftToRight {
+    from {
+        left: -100%;
+        opacity: 0.5;
+    }
+    to {
+        left: 0;
+        opacity: 1;
+    }
+}
+
+
+@keyframes rightToLeft {
+    from {
+        right: -150%;
+        opacity: 0.5;
+    }
+    to {
+        right: 0;
+        opacity: 1;
+    }
+}
