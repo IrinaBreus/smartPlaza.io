@@ -1,9 +1,9 @@
-import calcScroll from './modules/calcScroll';
 import scrollUp from './modules/scrollUp';
+import timer from './modules/timer';
 
 document.addEventListener('DOMContentLoaded', () => {
 'use stricti';
 
-scrollUp();
-calcScroll();
+// scrollUp();
+timer();
 });

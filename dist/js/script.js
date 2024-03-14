@@ -16,17 +16,7 @@
   \************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_calcScroll__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/calcScroll */ \"./src/js/modules/calcScroll.js\");\n/* harmony import */ var _modules_scrollUp__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/scrollUp */ \"./src/js/modules/scrollUp.js\");\n\r\n\r\n\r\ndocument.addEventListener('DOMContentLoaded', () => {\r\n'use stricti';\r\n\r\n(0,_modules_scrollUp__WEBPACK_IMPORTED_MODULE_1__[\"default\"])();\r\n(0,_modules_calcScroll__WEBPACK_IMPORTED_MODULE_0__[\"default\"])();\r\n});\n\n//# sourceURL=webpack://gulp-start/./src/js/main.js?");
-
-/***/ }),
-
-/***/ "./src/js/modules/calcScroll.js":
-/*!**************************************!*\
-  !*** ./src/js/modules/calcScroll.js ***!
-  \**************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-eval("__webpack_require__.r(__webpack_exports__);\nconst calcScroll = () => {\r\n    let div = document.createElement('div');\r\n    div.style.width = '50px';\r\n    div.style.height = '50px';\r\n    div.style.overflowY = 'scroll';\r\n    div.style.visibility = 'hidden';\r\n    document.body.append(div);\r\n\r\n    let scrollWidth = div.offsetWidth - div.clientWidth;\r\n    div.remove();\r\n    return scrollWidth;\r\n};\r\n\r\n/* harmony default export */ __webpack_exports__[\"default\"] = (calcScroll);\n\n//# sourceURL=webpack://gulp-start/./src/js/modules/calcScroll.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_scrollUp__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/scrollUp */ \"./src/js/modules/scrollUp.js\");\n/* harmony import */ var _modules_timer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/timer */ \"./src/js/modules/timer.js\");\n\r\n\r\n\r\ndocument.addEventListener('DOMContentLoaded', () => {\r\n'use stricti';\r\n\r\n// scrollUp();\r\n(0,_modules_timer__WEBPACK_IMPORTED_MODULE_1__[\"default\"])();\r\n});\n\n//# sourceURL=webpack://gulp-start/./src/js/main.js?");
 
 /***/ }),
 
@@ -37,6 +27,16 @@ eval("__webpack_require__.r(__webpack_exports__);\nconst calcScroll = () => {\r\
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 eval("__webpack_require__.r(__webpack_exports__);\nconst scrollUp = () => {\r\n    const up = document.querySelector('.up');\r\n\r\n    up.addEventListener('click', function(e) {\r\n        e.preventDefault();\r\n        \r\n        window.scrollTo({\r\n            left: 0,\r\n            top: 0,\r\n            behavior: \"smooth\"\r\n        });\r\n    })\r\n\r\n    window.addEventListener('scroll', () => {\r\n        if (document.documentElement.scrollTop > 1000) {\r\n            up.style.cssText = `opacity: 1;\r\n                                cursor: pointer;`\r\n        } else {\r\n            up.style.cssText = `opacity: 0;\r\n                                cursor: none;`\r\n        }\r\n    })\r\n}\r\n\r\n/* harmony default export */ __webpack_exports__[\"default\"] = (scrollUp);\n\n//# sourceURL=webpack://gulp-start/./src/js/modules/scrollUp.js?");
+
+/***/ }),
+
+/***/ "./src/js/modules/timer.js":
+/*!*********************************!*\
+  !*** ./src/js/modules/timer.js ***!
+  \*********************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+eval("__webpack_require__.r(__webpack_exports__);\nconst timer = () => {\r\n    const startDate = document.querySelector('.start-date'),\r\n          endDate = document.querySelector('.end-date');\r\n\r\n    const date = new Date(),\r\n          prewDate = new Date(date.getFullYear() - 1, 9, 5),\r\n          nextDate = new Date(date.getFullYear() + 1, 9, 5);\r\n\r\n    startDate.innerHTML = `${new Intl.DateTimeFormat('ru-Ru').format(prewDate)}`;\r\n    endDate.innerHTML = `${new Intl.DateTimeFormat('ru-Ru').format(nextDate)}`;\r\n    \r\n    function getDate() {\r\n        let times = new Date(nextDate) - new Date(),\r\n            month = Math.floor(times / (1000 * 60 * 60 * 24 * 30)),\r\n            days = Math.floor((times / (1000 * 60 * 60 * 24)) % 30.4 ),\r\n            hours = Math.floor((times / (1000 * 60 * 60)) % 24 ),\r\n            minutes = Math.floor((times / (1000 * 60 )) % 60 ),\r\n            seconds = Math.floor((times / 1000) % 60 );\r\n\r\n        return {times, month, days, hours, minutes, seconds}\r\n    }\r\n\r\n    setClock();\r\n\r\n    function setZero (num) {\r\n        num < 10 ? num = '0' + num : num = num;\r\n        return num;\r\n    }\r\n    function setClock() {\r\n        const months = document.querySelector('.months'),\r\n              days = document.querySelector('.days'),\r\n              hours = document.querySelector('.hours'),\r\n              minutes = document.querySelector('.minutes'),\r\n              seconds = document.querySelector('.seconds');\r\n        \r\n        timeInterval = setInterval(updateClock, 1000);\r\n\r\n        updateClock();\r\n\r\n        function updateClock() {\r\n            const t = getDate();\r\n\r\n            months.textContent = setZero(t.month);\r\n            days.textContent = setZero(t.days);\r\n            hours.textContent = setZero(t.hours);\r\n            minutes.textContent = setZero(t.minutes);\r\n            seconds.textContent = setZero(t.seconds);\r\n        }\r\n    }\r\n\r\n    getDate();\r\n}\r\n\r\n/* harmony default export */ __webpack_exports__[\"default\"] = (timer);\n\n//# sourceURL=webpack://gulp-start/./src/js/modules/timer.js?");
 
 /***/ })
 

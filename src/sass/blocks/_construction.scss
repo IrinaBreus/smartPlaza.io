@@ -1,0 +1,56 @@
+.construction {
+    background: url('../img/construction/fullBG.svg') center center / cover no-repeat;
+    position: relative;
+    padding: 172px 0;
+    overflow: hidden;
+    &__title {
+        font: 500 48px var(--font-family);
+        font-size: 48px;
+        font-weight: 500;
+        text-transform: uppercase;
+        color: var(--red-text);
+        text-align: center;
+        position: relative;
+        margin-bottom: 56px ;
+        &::after {
+            content: '';
+            display: block;
+            width: 260px;
+            height: 2px;
+            background: #fff;
+            // bottom: 0;
+            // left: 0;
+            // right: 0;
+            margin: 0 auto;
+            margin-top: 20px;
+        }
+    }
+    &__block {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+        gap: 32px;
+        position: relative;
+    }
+    &__img {
+        grid-column: 1 / 2;
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 32px;
+        position: absolute;
+        // left: -130%;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 20px;
+        }
+    }
+    &__timer {
+        grid-column: 2 / 3;
+        width: 100%;
+        position: relative;
+    }
+}
