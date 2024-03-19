@@ -1,3 +1,15 @@
+@keyframes hiddenShow {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
 @keyframes leftToRight {
     from {
         left: -100%;
@@ -9,7 +21,6 @@
     }
 }
 
-
 @keyframes rightToLeft {
     from {
         right: -150%;
@@ -19,4 +30,85 @@
         right: 0;
         opacity: 1;
     }
+}
+
+@keyframes centerToUp {
+    from {
+        top: 40%;
+    }
+    to {
+        top: 0;
+    }
+}
+
+@keyframes bottomToUp {
+    from {
+        top: 160%;
+        opacity: 0;
+    }
+    to {
+        top: 0;
+        opacity: 1;
+    }
+}
+
+
+// 
+
+@keyframes rightToLeftRev {
+    from {
+        right: 0;
+        opacity: 1;
+    }
+    to {
+        right: -150%;
+        opacity: 0.5;
+    }
+}
+
+@keyframes centerToUpRev {
+    from {
+        top: 0;
+    }
+    to {
+        top: 40%;
+    }
+}
+
+@keyframes bottomToUpRev {
+    from {
+        top: 0;
+        opacity: 1;
+    }
+    to {
+        top: 160%;
+        opacity: 0;
+    }
+}
+
+.center-up {
+    position: absolute;
+    animation: centerToUp .9s ease-out both;
+}
+
+.bottom-top {
+    animation: bottomToUp .9s ease-out both;
+}
+
+.right-left {
+    animation: rightToLeft .9s ease-out both;
+}
+
+
+.center-up-rev {
+    position: absolute;
+    animation: centerToUpRev .9s ease-out both;
+}
+
+.bottom-top-rev {
+    animation: bottomToUpRev .9s ease-out both;
+}
+
+.right-left-rev {
+    animation: rightToLeftRev .9s ease-out both;
 }

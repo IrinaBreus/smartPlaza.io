@@ -1,4 +1,5 @@
-import scrollUp from './modules/scrollUp';
+import animationScroll from './modules/animationScroll';
+// import scrollUp from './modules/scrollUp';
 import timer from './modules/timer';
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -6,4 +7,5 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // scrollUp();
 timer();
+animationScroll('.construction');
 });

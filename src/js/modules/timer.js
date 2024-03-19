@@ -33,7 +33,7 @@ const timer = () => {
               minutes = document.querySelector('.minutes'),
               seconds = document.querySelector('.seconds');
         
-        timeInterval = setInterval(updateClock, 1000);
+        setInterval(updateClock, 1000);
 
         updateClock();
 
@@ -48,7 +48,6 @@ const timer = () => {
         }
     }
 
-    getDate();
 }
 
 export default timer;
