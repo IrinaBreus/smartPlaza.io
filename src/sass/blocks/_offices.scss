@@ -1,0 +1,177 @@
+.offices {
+    padding-top: 172px;
+    background: url('../../img/offices/offices_bg.svg') center center / cover no-repeat;
+    min-height: 778px;
+    overflow: hidden;
+    &__main {
+        display: grid;
+        grid-template:76px 597px / 967px 1fr 4fr;
+        gap: 32px;
+        position: relative;
+        
+    }
+    &__left-block {
+        grid-area: 1 / 1 / 3 / 2;
+        position: absolute;
+        min-height: 686px;
+    }
+    &__title {
+        width: max-content;
+        text-transform: uppercase;
+        color: var(--red-text);
+        font-family: "Saira";
+        font-size: 48px;
+        font-weight: 500;
+        border-bottom: 2px solid var(--white);
+        margin-bottom: 40px;
+    }
+    &__img {
+        width: 100%;
+        grid-column: 1 / 2;
+        display: grid;
+        grid-template: 55px repeat(5, max-content) 34px / 78px 1fr 60px;
+    }
+    &__foto-big {
+        grid-area: 1 / 1 / 8 / 4;
+        width: 967px;
+        img {
+            border-radius: 20px;
+            width: 100%;
+            height: 100%;
+            object-fit:fill;
+        }
+    }
+    &__foto-floor {
+        display: block;
+        position: relative;
+        opacity: 0;
+        &:hover {
+            opacity: 1;
+        }
+        p {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-family: "Open Sans";
+            font-size: 32px;
+            font-weight: 700;
+            color: var(--white);
+        }
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    &__foto-floor_5 {
+        grid-area: 2 / 2 / 3 / 3;
+    }
+    &__foto-floor_4 {
+        grid-area: 3 / 2 / 4 / 3;
+    }
+    &__foto-floor_3 {
+        grid-area: 4 / 2 / 5 / 3;
+    }
+    &__foto-floor_2 {
+        grid-area: 5 / 2 / 6 / 3;
+    }
+    &__foto-floor_1 {
+        grid-area: 6 / 2 / 7 / 3;
+    }
+
+
+    &__text-block {
+        grid-area: 2 / 3 / 3 / 4;
+        position: relative;
+        width: 100%;
+    }
+    &__text-animation {
+        position: absolute;
+    }
+    &__tab-lists {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        list-style: none;
+        margin-bottom: 16px;
+    }
+    &__tab-list {
+        font-family: "Saira";
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 117%;
+        text-transform: uppercase;
+        color: #4a4a4a;
+        border-bottom: 2px solid #4a4a4a;
+        padding-bottom: 16px;
+        cursor: pointer;
+    }
+    &__tab-content {
+        display: none;
+    }
+    &__descr {
+        font-family: "Saira";
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 171%;
+        color: var(--white);
+        margin-bottom: 24px;
+    }
+    &__floor {
+        color: var(--red-text);
+        font-family: "Saira";
+        font-size: 32px;
+        text-transform: uppercase;
+        font-weight: 400;
+        margin-bottom: 26px;
+        span {
+            font-weight: 700;
+            color: var(--red-text);
+        }
+    }
+    &__info {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        margin-bottom: 22px;
+    }
+    &__txt {
+        font-family: "Saira";
+        font-size: 16px;
+        font-weight: 300;
+        text-transform: uppercase;
+        color: #eee;
+        span {
+            display: block;
+            font-family: "Saira";
+            font-size: 100px;
+            font-weight: 300;
+            color: #d51419;
+            line-height: 100px;
+        }
+    }
+    &__more {
+        display: flex;
+        font-family: "Saira";
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 111%;
+        text-transform: uppercase;
+        text-align: center;
+        color: var(--white);
+        text-decoration: none;  
+        align-items: center;
+        transform-origin: bottom left;
+        transition: all .7s;
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+}
+
+.list-active {
+    color: var(--red-text);
+    border-bottom: 2px solid var(--red-text);
+}
+.tab-content_active {
+    display: block;
+}

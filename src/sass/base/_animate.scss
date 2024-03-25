@@ -12,8 +12,8 @@
 
 @keyframes leftToRight {
     from {
-        left: -100%;
-        opacity: 0.5;
+        left: -150%;
+        opacity: 0;
     }
     to {
         left: 0;
@@ -44,7 +44,7 @@
 @keyframes bottomToUp {
     from {
         top: 160%;
-        opacity: 0;
+        opacity: 0.5;
     }
     to {
         top: 0;
@@ -54,6 +54,16 @@
 
 
 // 
+@keyframes leftToRightRev {
+    from {
+        left: 0;
+        opacity: 1;
+    }
+    to {
+        left: -100%;
+        opacity: 0;
+    }
+}
 
 @keyframes rightToLeftRev {
     from {
@@ -82,7 +92,7 @@
     }
     to {
         top: 160%;
-        opacity: 0;
+        opacity: 0.5;
     }
 }
 
@@ -111,4 +121,12 @@
 
 .right-left-rev {
     animation: rightToLeftRev .9s ease-out both;
+}
+
+.left-right {
+    animation: leftToRight .9s ease-out both;
+}
+
+.left-right-rev {
+    animation: leftToRightRev .9s ease-out both;
 }

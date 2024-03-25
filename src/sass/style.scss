@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Saira", sans-serif;
+    font-family: "Saira", "Open Sans", sans-serif;
     color: #ffffff;
 }
 
@@ -18,5 +18,6 @@ body {
     background: var(--main);
 }
 
+@import 'base/animate';
 @import 'base/*.scss';
 @import 'blocks/*.scss';
