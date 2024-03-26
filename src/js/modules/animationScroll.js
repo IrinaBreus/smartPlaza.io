@@ -11,7 +11,7 @@ function animationScroll (className) {
             moveAnimation('.animation-up', 'bottom-top', 'bottom-top-rev');
             moveAnimation('.animation-right', 'right-left', 'right-left-rev');
             moveAnimation('.animation-left', 'left-right', 'left-right-rev');
-            console.log(parentPos, parentHeight);
+            // console.log(parentPos, parentHeight);
         } else  {
 
             moveAnimation('.animation-center', 'center-up-rev', 'center-up');
