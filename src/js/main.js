@@ -11,4 +11,5 @@ timer();
 tabs();
 animationScroll('.construction');
 animationScroll('.offices');
+animationScroll('.about');
 });
