@@ -1,5 +1,6 @@
 .about {
-    background: var(--main);
+    background: url('../img/about_bg.svg') center center / cover no-repeat;
+    z-index: 1;
     min-height: 653px;
     &__wrapper {
         display: grid;
@@ -13,11 +14,6 @@
         width: 100%;
         position: absolute;
     }
-    // &__anim {
-    //     position: absolute;
-    //     width: 100%;
-    //     top: 0;
-    // }
     &__title {
         font: 500 40px var(--font-family);
         font-size: 40px;
@@ -36,6 +32,7 @@
         grid-column: 2 / 3;
         display: block;
         position: absolute;
+        top: 0;
         img {
             width: 100%;
             height: 100%;

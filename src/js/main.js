@@ -9,7 +9,10 @@ document.addEventListener('DOMContentLoaded', () => {
 // scrollUp();
 timer();
 tabs();
+
 animationScroll('.construction');
 animationScroll('.offices');
 animationScroll('.about');
+animationScroll('.founder');
+
 });

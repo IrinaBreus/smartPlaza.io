@@ -43,8 +43,8 @@
 
 @keyframes bottomToUp {
     from {
-        top: 160%;
-        opacity: 0.5;
+        top: 220%;
+        opacity: 0;
     }
     to {
         top: 0;
@@ -91,7 +91,7 @@
         opacity: 1;
     }
     to {
-        top: 160%;
+        top: 220%;
         opacity: 0.5;
     }
 }
