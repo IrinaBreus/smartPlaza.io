@@ -1,0 +1,53 @@
+.haracteristics {
+    // min-height: 1644px;
+    padding: 172px 0 0 0;
+    background: var(--main);
+    position: relative;
+    &__wrapper {
+        min-height: 960px;
+        display: grid;
+        grid-template: repeat(3, 320px) / 1fr;
+        position: relative;
+    }
+    &__foto {
+        grid-area: 1 / 1 / 4 / 2;
+        width: 100%;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+    &__descr {
+        grid-area: 2 / 1 / 3 / 2;
+        min-height: 320px;
+        display: grid;
+        align-items: flex-start;
+        grid-template-columns: repeat(3, 3fr 4px) 3fr;
+        text-align: center;
+        position: absolute;
+        width: 100%;
+        top: 320px;
+    }
+    &__num {
+        font-size: 100px;
+        font-weight: 600;
+        line-height: 90%;
+        padding-top: 100px;
+        span {
+            font-size: 40px;
+            font-weight: 400;
+        }
+    }
+    &__txt {
+        font-size: 18px;
+        font-weight: 400;
+        text-transform: uppercase;
+        align-content: flex-start;
+    }
+    &__divider {
+        width: 4px;
+        height: 320px;
+        background: var(--red);
+    }
+}

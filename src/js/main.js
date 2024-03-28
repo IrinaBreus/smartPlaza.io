@@ -14,5 +14,6 @@ animationScroll('.construction');
 animationScroll('.offices');
 animationScroll('.about');
 animationScroll('.founder');
+animationScroll('.haracteristics');
 
 });
