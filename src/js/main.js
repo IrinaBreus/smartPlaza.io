@@ -16,5 +16,6 @@ animationScroll('.about');
 animationScroll('.founder');
 animationScroll('.haracteristics');
 animationScroll('.conferece-hall');
+animationScroll('.located');
 
 });

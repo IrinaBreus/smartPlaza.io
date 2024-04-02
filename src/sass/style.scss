@@ -18,6 +18,5 @@ body {
     background: var(--main);
 }
 
-@import 'base/animate';
 @import 'base/*.scss';
 @import 'blocks/*.scss';

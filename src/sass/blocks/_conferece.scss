@@ -2,6 +2,7 @@
     position: relative;
     background: url('../img/Conference_bg.svg') center center / cover no-repeat;
     padding-top: 172px;
+    overflow: hidden;
     &__wrapper {
         display: grid;
         grid-template-columns: 7fr 1fr 4fr;
