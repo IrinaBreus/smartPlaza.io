@@ -23,8 +23,8 @@
 
 @keyframes rightToLeft {
     from {
-        right: -150%;
-        opacity: 0.5;
+        right: -200%;
+        opacity: 0;
     }
     to {
         right: 0;
@@ -71,8 +71,8 @@
         opacity: 1;
     }
     to {
-        right: -150%;
-        opacity: 0.5;
+        right: -200%;
+        opacity: 0;
     }
 }
 
@@ -92,7 +92,7 @@
     }
     to {
         top: 220%;
-        opacity: 0.5;
+        opacity: 0;
     }
 }
 
