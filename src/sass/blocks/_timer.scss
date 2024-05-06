@@ -29,7 +29,7 @@
     }
     &__panel {
         display: grid;
-        grid-template-columns: repeat(4, 6fr 1fr) 6fr;
+        grid-template-columns: repeat(4, 120px 1fr) 120px;
         gap: 8px;
         align-items: center;
         text-align: center;
@@ -52,12 +52,166 @@
         }
     }
     &__divide {
-        font: 700 64px var(--font-family);
         color: var(--red-text);
         font-size: 64px;
         font-weight: 700;
         line-height: 64px;
         text-align: center;
         animation: hiddenShow 1s ease infinite;
+    }
+}
+
+@media (max-width: 1440px) {
+    .timer {
+        &__panel {
+            grid-template-columns: repeat(4, 80px 1fr) 80px;
+        }
+        &__box {
+            padding: 18px 0 16px;
+            div {
+                font-size: 50px;
+            }
+        }
+        &__divide {
+            font-size: 50px;
+        }
+    }
+}
+@media (max-width: 1200px) {
+    .timer {
+        padding: 30px;
+        &__title {
+            font-size: 28px;
+        }
+        &__txt {
+            font-size: 18px;
+            font-weight: 600;
+            span {
+                font-size: 14px;
+            }
+        }
+        &__panel {
+            grid-template-columns: repeat(4, 65px 1fr) 65px;
+        }
+        &__box {
+            padding: 10px 0;
+            div {
+                font-size: 42px;
+                line-height: 40px;
+            }
+            span {
+                font-size: 12px;
+            }
+        }
+        &__divide {
+            font-size: 40px;
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .timer {
+        padding: 20px;
+        &__title {
+            font-size: 24px;
+        }
+        &__txt {
+            font-size: 14px;
+            span {
+                font-size: 12px;
+            }
+        }
+        &__panel {
+            grid-template-columns: repeat(4, 60px 1fr) 60px;
+        }
+        &__box {
+            padding: 10px 0;
+            div {
+                font-size: 36px;
+                line-height: 36px;
+            }
+            span {
+                font-size: 10px;
+            }
+        }
+        &__divide {
+            font-size: 36px;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .timer {
+        padding: 16px;
+        &__title {
+            font-size: 16px;
+            margin-bottom: 6px;
+        }
+        &__deadline {
+            margin-bottom: 6px;
+        }
+        &__txt {
+            font-size: 16px;
+            span {
+                font-size: 12px;
+            }
+        }
+        &__panel {
+            grid-template-columns: repeat(4, 50px 1fr) 50px;
+            gap: 6px;
+        }
+        &__box {
+            div {
+                font-size: 24px;
+                line-height: 24px;
+            }
+            span {
+                font-size: 8px;
+            }
+        }
+        &__divide {
+            font-size: 24px;
+            line-height: 24px;
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .timer {
+        padding: 24px 12px;
+        min-width: 300px;
+        &__title {
+            font-size: 20px;
+            margin-bottom: 12px;
+        }
+        &__deadline {
+            display: flex;
+            margin-bottom: 10px;
+        }
+        &__txt {
+            font-size: 18px;
+            span {
+                font-size: 12px;
+            }
+        }
+        &__panel {
+            grid-template-columns: repeat(4, 46px 1fr) 46px;
+            gap: 2px;
+        }
+        &__box {
+            border-radius: 4px;
+            height: 50px;
+            div {
+                font-size: 24px;
+                line-height: 14px;
+            }
+            span {
+                font-size: 8px;
+            }
+        }
+        &__divide {
+            font-size: 24px;
+            line-height: 14px;
+        }
     }
 }
