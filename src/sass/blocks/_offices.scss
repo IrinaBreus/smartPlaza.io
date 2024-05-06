@@ -88,12 +88,15 @@
     }
     &__text-animation {
         position: absolute;
+        width: 100%;
     }
     &__tab-lists {
+        width: 100%;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         list-style: none;
         margin-bottom: 16px;
+        
     }
     &__tab-list {
         font-family: "Saira";
@@ -105,6 +108,7 @@
         border-bottom: 2px solid #4a4a4a;
         padding-bottom: 16px;
         cursor: pointer;
+        white-space: nowrap;
     }
     &__tab-content {
         display: none;
@@ -132,6 +136,7 @@
     &__info {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
         margin-bottom: 22px;
     }
     &__txt {
@@ -175,3 +180,208 @@
 .tab-content_active {
     display: block;
 }
+
+@media (max-width: 1600px) {
+    .offices {
+        &__main {
+            grid-template:76px 597px / 840px 1fr;
+            gap: 32px;
+        }
+        &__left-block {
+            grid-area: 1 / 1 / 3 / 2;
+        }
+        &__img {
+            grid-template: 55px repeat(5, max-content) 30px / 68px 1fr 54px;
+        }
+        &__foto-big {
+            width: 100%;
+        }
+        &__foto-floor {
+            p {
+                font-size: 30px;
+            }
+        }
+
+
+        &__text-block {
+            grid-area: 2 / 2 / 3 / 3;
+        }
+        &__tab-list {
+            font-size: 20px;
+        }
+        &__floor {
+            font-size: 28px;
+        }
+        &__txt {
+            span {
+                font-size: 72px;
+                line-height: 70px;
+            }
+        }
+    }
+}
+@media (max-width: 1440px) {
+    .offices {
+        &__main {
+            grid-template:76px 500px / 540px 1fr;
+            gap: 32px;
+        }
+        &__img {
+            grid-template: 35px repeat(5, max-content) 20px / 42px 1fr 34px;
+        }
+        &__foto-floor {
+            p {
+                width: 100%;
+                text-align: center;
+                font-size: 24px;
+            }
+        }
+        &__txt {
+            span {
+                font-size: 62px;
+                line-height: 60px;
+            }
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .offices {
+        &__main {
+            grid-template:76px 430px / 400px 1fr;
+            gap: 32px;
+        }
+        &__img {
+            grid-template: 30px repeat(5, max-content) 16px / 30px 1fr 24px;
+        }
+        &__foto-floor {
+            p {
+                font-size: 18px;
+            }
+        }
+        &__descr {
+            font-size: 12px;
+            margin-bottom: 10px;
+        }
+        &__floor {
+            font-size: 24px;
+            margin-bottom: 12px;
+        }
+        &__txt {
+            span {
+                font-size: 42px;
+                line-height: 40px;
+            }
+        }
+        &__more {
+            font-size: 18px;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .offices {
+        padding-top: 80px;
+        min-height: max-content;
+        &__main {
+            grid-template:50px 260px / 1fr 1fr;
+            gap: 32px;
+            
+        }
+        &__left-block {
+            grid-area: 1 / 1 / 3 / 2;
+            min-height: 200px;
+        }
+        &__title {
+            font-size: 32px;
+            margin-bottom: 32px;
+        }
+        &__img {
+            width: 100%;
+            grid-area: 2 / 1 / 3 / 2;
+            display: grid;
+            grid-template: 1fr / 1fr;
+        }
+        &__foto-floor {
+            display:none;
+        }
+            
+        &__text-block {
+            grid-area: 2 / 2 / 3 / 3;
+        }
+        &__tab-list {
+            font-size: 20px;
+            padding-bottom: 12px;
+        }
+        &__descr {
+            display: none;
+        }
+        &__floor {
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+        &__info {
+            margin-bottom: 10px;
+        }
+        &__txt {
+            font-size: 12px;
+            span {
+                font-size: 72px;
+                line-height: 72px;
+            }
+        }
+        &__more {
+            font-size: 16px;
+            &:hover {
+                transform: none;
+            }
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .offices {
+        padding-top: 72px;
+        &__main {
+            display: grid;
+            grid-template: 240px 490px / 1fr;
+            gap: 24px;
+        }
+        &__left-block {
+            grid-area: 1 / 1 / 2 / 2;
+        }
+        &__title {
+            font-size: 24px;
+            margin-bottom: 28px;
+        }
+        &__img {
+            width: 100%;
+            height: 178px;
+        }
+            
+        &__text-block {
+            grid-area: 2 / 1 / 3 / 2;
+        }
+        &__descr {
+            display: block;
+            font-size: 14px;
+        }
+        &__info {
+            margin-bottom: 10px;
+        }
+        &__txt {
+            font-size: 12px;
+            span {
+                font-size: 72px;
+                line-height: 72px;
+            }
+        }
+        &__more {
+            font-size: 16px;
+            &:hover {
+                transform: none;
+            }
+        }
+    }
+}
+
