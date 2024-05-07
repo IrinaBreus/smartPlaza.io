@@ -15,7 +15,6 @@
         position: absolute;
     }
     &__title {
-        font: 500 40px var(--font-family);
         font-size: 40px;
         font-weight: 500;
         text-transform: uppercase;
@@ -29,15 +28,118 @@
     }
     &__img-block {
         width: 100%;
+        height: 653px;
         grid-column: 2 / 3;
         display: block;
         position: absolute;
         top: 0;
         img {
+            @include image-base;
+        }
+    }
+    &__more-dots {
+        display: none;
+    }
+    &__more-btn {
+        display: none;
+    }
+}
+
+@media (max-width: 1600px) {
+    .about {
+        &__wrapper {
+            grid-template-columns: 1fr 2fr;
+        }
+    }
+}
+
+@media (max-width: 1440px) {
+    .about {
+        min-height: 600px;
+        &__wrapper {
+            grid-template-columns: 1fr 1fr;
+        }
+        &__img-block {
+            height: 560px;
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    .about {
+        min-height: 640px;
+        &__img-block {
+            position: relative;
+            height: 560px;
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .about {
+        min-height: 320px;
+        padding-bottom: 30px;
+        &__wrapper {
+            grid-template-columns: 1fr 1fr;
+            min-height: max-content;
+        }
+        &__text-block {
+            position: relative;
+        }
+        &__title {
+            font-size: 32px;
+        }
+        &__img-block {
+            position: relative;
+            height: 272px;
+        }
+        &__more-dots {
+            display: inline;
+        }
+        &__more-btn {
+            display: inline;
+            border: none;
+            background: none;
+            color: rgb(106, 106, 106);
+            cursor: pointer;
+        }
+        &__more-txt {
+            display: none;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .about {
+        min-height: 328px;
+        &__wrapper {
+            gap: 20px;
+        }
+        &__title {
+            margin-bottom: 24px;
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .about {
+        min-height: 500px;
+        &__wrapper {
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(2, max-content);
+            gap: 24px;
+        }
+        &__text-block {
+            grid-area: 1 / 1 / 2 / 2;
+        }
+        &__title {
+            font-size: 24px;
+            margin-bottom: 12px;
+        }
+        &__img-block {
             width: 100%;
-            height: 100%;
-            object-fit: cover;
-            border-radius: 20px;
+            height: 220px;
+            grid-area: 2 / 1 / 3 / 2;
         }
     }
 }

@@ -1,5 +1,5 @@
 .marquee {
-    height: 455px;
+    padding: 100px 0;
     background: var(--main);
     position: relative;
     display: flex;
@@ -39,4 +39,41 @@
         transform: translateX(-100%);
     }
     
+}
+
+
+@media (max-width: 992px) {
+    
+}
+
+@media (max-width: 768px) {
+    .marquee {
+        padding: 80px 0;
+        &__txt {
+            span {
+                font-size: 64px;
+                &::before {
+                    width: 32px;
+                    height: 32px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .marquee {
+        padding: 72px 0;
+        &__txt {
+            width: 250%;
+            span {
+                font-size: 40px;
+                &::before {
+                    width: 16px;
+                    height: 16px;
+                    margin: 0 6px;
+                }
+            }
+        }
+    }
 }

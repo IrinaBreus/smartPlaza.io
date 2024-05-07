@@ -18,5 +18,6 @@ body {
     background: var(--main);
 }
 
+@import 'base/mixins';
 @import 'base/*.scss';
 @import 'blocks/*.scss';
