@@ -17,7 +17,7 @@ animationScroll('.offices');
 if (window.screen.availWidth > 992) {
     animationScroll('.about');
 }
-// animationScroll('.founder');
+animationScroll('.founder');
 // animationScroll('.haracteristics');
 // animationScroll('.conferece-hall');
 // animationScroll('.located');
