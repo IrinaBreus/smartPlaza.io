@@ -18,7 +18,7 @@ if (window.screen.availWidth > 992) {
     animationScroll('.about');
 }
 animationScroll('.founder');
-// animationScroll('.haracteristics');
+animationScroll('.haracteristics');
 // animationScroll('.conferece-hall');
 // animationScroll('.located');
 
