@@ -11,3 +11,31 @@
         transform: translateY(2px);
     }
 }
+
+@media (max-width: 992px) {
+    .btn {
+        padding: 12px 60px;
+    }
+}
+
+@media (max-width: 768px) {
+    .btn {
+        padding: 10px 30px;
+        font-size: 16px;
+        font-weight: 400;
+        border-radius: 4px;
+        border: none;
+        background: linear-gradient(324deg, #eb1d23 0%, #a30003 100%);
+        transition: all .7s;
+        &:hover {
+            background: linear-gradient(324deg, #811b1e 0%, #5f1112 100%);
+            transform: translateY(2px);
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .container {
+        max-width: 100%;
+    }
+}
