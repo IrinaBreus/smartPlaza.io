@@ -4,7 +4,7 @@ function animationScroll (className) {
           parentHeight = parent.getBoundingClientRect().height;
 
 
-          window.addEventListener('resize', animationToScroll);
+    window.addEventListener('resize', animationToScroll);
     document.addEventListener('scroll', animationToScroll);
 
 
