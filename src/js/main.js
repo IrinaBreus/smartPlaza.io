@@ -1,5 +1,6 @@
 import animationScroll from './modules/animationScroll';
 import readMore from './modules/readMore';
+import sliderAccordion from './modules/sliderAccordion';
 import tabs from './modules/tabs';
 // import scrollUp from './modules/scrollUp';
 import timer from './modules/timer';
@@ -21,5 +22,7 @@ animationScroll('.founder');
 animationScroll('.haracteristics');
 animationScroll('.conference-hall');
 animationScroll('.located');
+
+sliderAccordion();
 
 });

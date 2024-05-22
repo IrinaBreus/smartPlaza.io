@@ -131,7 +131,7 @@
         }
         &__slide {
             &:hover {
-                width: 90%;
+                width: calc(100% / 6);
             }
         }
         &__name {
@@ -173,7 +173,7 @@
         &__slide {
             width: calc(100% / 3);
             &:hover {
-                width: 90%;
+                width: calc(100% / 3);
             }
         }
         &__name {
@@ -187,5 +187,8 @@
                 font-size: 24px;
             }
         }
+    }
+    .services__slide:hover >.services__name {
+        left: 20px;
     }
 }
