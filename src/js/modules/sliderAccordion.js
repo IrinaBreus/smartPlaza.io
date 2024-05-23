@@ -1,5 +1,5 @@
 const sliderAccordion = () => {
-    if (window.screen.availWidth >= 768) {
+    if (window.screen.availWidth <= 768) {
         const sliders = document.querySelectorAll('.services__slider'),
               slide = document.querySelectorAll('.services__slide');
     

@@ -1,0 +1,84 @@
+.hamburger {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .hamburger {  
+        top: 0;
+        left: 100%;
+        position: absolute;
+        background: var(--main);
+        width: 0;
+        height: 0;
+        opacity: 0;
+        z-index: 5;
+        display: grid;
+        align-items: center;
+        overflow: hidden;
+        padding-left: 100px;
+        transition: all .7s ease-in-out;
+        &__menu {
+            list-style-type: none;
+            font-size: 28px;
+            li {
+                margin-bottom: 18px;
+                a {
+                    text-decoration: none;
+                }
+            }
+        }
+        &__open {
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            opacity: 1;
+        }
+    }
+        
+
+    .hamburger__btn {
+        display: block;
+        border: none;
+        background: transparent;
+        width: 27px;
+        height: 14px;
+        position: absolute;
+        right: 0;
+        top: 20px;
+        cursor: pointer;
+        z-index: 10;
+        span {
+            transition: all .7s;
+            width: 100%;
+            height: 2px;
+            background: var(--white);
+            display: block;
+            margin-bottom: 4px;
+            &:last-child {
+                width: 60%;
+                margin-left: 40%;
+            }
+        }
+    }
+    
+    .hamburger__btn-close {
+        span {
+            transition: all .7s;
+            right: 20px;
+            &:first-child{
+                transform-origin: right top;
+                transform: rotate(-45deg) translateX(4px);
+            }
+            &:last-child {
+                width: 100%;
+                margin-left: 0;
+                transform-origin: right bottom;
+                transform: rotate(45deg) translateX(4px);
+            }
+            &:nth-child(2) {
+                opacity: 0;
+            }
+        }
+    }
+}

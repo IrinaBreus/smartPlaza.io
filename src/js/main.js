@@ -1,4 +1,5 @@
 import animationScroll from './modules/animationScroll';
+import hamburger from './modules/hamburger';
 import readMore from './modules/readMore';
 import sliderAccordion from './modules/sliderAccordion';
 import tabs from './modules/tabs';
@@ -24,5 +25,6 @@ animationScroll('.conference-hall');
 animationScroll('.located');
 
 sliderAccordion();
+hamburger();
 
 });

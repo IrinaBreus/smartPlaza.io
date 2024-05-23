@@ -46,9 +46,6 @@
             border-bottom: 2px solid var(--red-text);
         }
     }
-    &__hamburger-btn {
-        display: none;
-    }
     &__divider {
         width: 100%;
         height: 1px;
@@ -205,26 +202,7 @@
         &__nav-menu {
             display: none;
         }
-        &__hamburger-btn {
-            display: block;
-            width: 27px;
-            height: 14px;
-            position: absolute;
-            right: 0;
-            top: 20px;
-            cursor: pointer;
-            span {
-                width: 100%;
-                height: 2px;
-                background: var(--white);
-                display: block;
-                margin-bottom: 4px;
-                &:last-child {
-                    width: 60%;
-                    margin-left: 40%;
-                }
-            }
-        }
+        
         &__descr {
             position: relative;
             display: grid;
@@ -260,9 +238,6 @@
         &__logo {
             width: 114px; 
             height: 32px;
-        }
-        &__hamburger-btn {
-            top: 10px;
         }
         &__divider {
             top: 72px;
