@@ -1,6 +1,10 @@
 .hamburger {
     display: none;
 }
+.hamburger__btn {
+    display: none;
+}
+
 
 @media (max-width: 768px) {
     .hamburger {  
@@ -80,5 +84,23 @@
                 opacity: 0;
             }
         }
+    }
+}
+
+@media (max-width: 576px) {
+    .hamburger {  
+        padding-left: 60px;
+        align-items: flex-start;
+        padding-top: 120px;
+        &__menu {
+            font-size: 20px;
+            li {
+                margin-bottom: 18px;
+            }
+        }
+    }
+
+    .hamburger__btn {
+        top: 8px;
     }
 }
