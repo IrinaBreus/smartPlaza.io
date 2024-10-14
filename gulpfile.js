@@ -26,7 +26,7 @@ const gulpIf = require('gulp-if');
 
 // Проверка для production
 const isProd = process.argv.includes("--production");
-isDev = !isProd;
+let isDev = !isProd;
 
 
 // Обработка HTML
