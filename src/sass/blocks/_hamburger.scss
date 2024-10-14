@@ -9,7 +9,7 @@
 @media (max-width: 768px) {
     .hamburger {  
         top: 0;
-        left: 100%;
+        right: 0;
         position: absolute;
         background: var(--main);
         width: 0;
@@ -19,8 +19,8 @@
         display: grid;
         align-items: center;
         overflow: hidden;
-        padding-left: 100px;
         transition: all .7s ease-in-out;
+        padding-left: 100px;
         &__menu {
             list-style-type: none;
             font-size: 28px;
@@ -33,7 +33,6 @@
         }
         &__open {
             top: 0;
-            left: 0;
             width: 100%;
             height: 100vh;
             opacity: 1;
